@@ -14,6 +14,7 @@ Installation
 ------------- 
 - Install and follow the instructions to run this project https://github.com/MiguelAlcaino/perkbox2
 - Run `composer install`
+- Hit Enter to choose the default options
 - Run the server with `bin/console server:run`
 
 Usage
