@@ -20,26 +20,20 @@ class DefaultController extends Controller
     {
         $response = new JsonResponse();
 
-        $manager = $this->getDoctrine()->getManager();
-        $coupons = $manager->getRepository(Coupon::class)->getFilteredCoupons(
-            $request->query->get('brand'),
-            $request->query->get('value'),
-            $request->query->get('limit')
+        $headers = [];
+        $query = [
+            'limit' => $request->query->get('limit'),
+            'brand' => $request->query->get('brand'),
+            'value' => $request->query->get('value')
+        ];
+        $couponsResponse = \Unirest\Request::get(
+            $this->getParameter('coupons_api_host').':'.$this->getParameter('coupons_api_port').'/coupons',
+            $headers,
+            $query
         );
-        $coupons = $this->prepareCoupons($coupons);
-        $response->setData($coupons);
+
+        $response->setData($couponsResponse->body);
 
         return $response;
-    }
-
-    /**
-     * @param array $coupons
-     * @return array
-     */
-    private function prepareCoupons($coupons){
-        foreach ($coupons as $key => $coupon){
-            unset($coupons[$key]['id']);
-        }
-        return$coupons;
     }
 }

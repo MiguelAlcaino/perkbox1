@@ -9,14 +9,12 @@ Requirements
 -------------
 
 - Php 7
-- php-sqlite extension http://php.net/manual/en/sqlite.installation.php
 - composer https://getcomposer.org/
 
 Installation
--------------
+------------- 
+- Install and follow the instructions to run this project https://github.com/MiguelAlcaino/perkbox2
 - Run `composer install`
-- Run `bin/console doctrine:schema:create` to create the tables in the db.
-- Load the fixtures with `bin/console doctrine:fixtures:load`. This will populate the database with brands, the brands will have names like this: "Brand1", "Brand2",....
 - Run the server with `bin/console server:run`
 
 Usage
