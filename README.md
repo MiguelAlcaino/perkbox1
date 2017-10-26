@@ -24,4 +24,4 @@ Usage
 	- brand: `/coupons?brand=Brand1`
     - value: `/coupons?value=10`
     - limit: `/coupons?limit=10`
- The parameters and be used together separating them with the **&** symbol. 
+ The parameters can be used together separating them with the **&** symbol. 
