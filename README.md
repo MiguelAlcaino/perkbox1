@@ -2,8 +2,7 @@ Perkbox test 1
 ===================
 
 
-This is the result of the task 1 of the PerkBox test. The system uses an sqlite database stored in `app/Resources/database/database.sqlite`.
-
+This is the result of the task 1 of the PerkBox test.
 
 Requirements
 -------------
